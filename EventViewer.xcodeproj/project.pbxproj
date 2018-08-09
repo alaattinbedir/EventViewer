@@ -101,11 +101,9 @@
 			children = (
 				840FD7C1211C2C7400584C6C /* AppDelegate.swift */,
 				840FD7C3211C2C7400584C6C /* ViewController.swift */,
-				840FD7C5211C2C7400584C6C /* Main.storyboard */,
-				840FD7CB211C2C7600584C6C /* Assets.xcassets */,
-				840FD7CD211C2C7600584C6C /* LaunchScreen.storyboard */,
 				840FD7D0211C2C7600584C6C /* Info.plist */,
 				840FD7C8211C2C7400584C6C /* EventViewer.xcdatamodeld */,
+				840FD7F2211C2D3000584C6C /* Supporting Files */,
 			);
 			path = EventViewer;
 			sourceTree = "<group>";
@@ -126,6 +124,16 @@
 				840FD7E6211C2C7600584C6C /* Info.plist */,
 			);
 			path = EventViewerUITests;
+			sourceTree = "<group>";
+		};
+		840FD7F2211C2D3000584C6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				840FD7C5211C2C7400584C6C /* Main.storyboard */,
+				840FD7CB211C2C7600584C6C /* Assets.xcassets */,
+				840FD7CD211C2C7600584C6C /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
