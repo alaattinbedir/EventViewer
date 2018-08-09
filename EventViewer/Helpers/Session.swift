@@ -13,7 +13,7 @@ class Session {
     func getHeaders() -> [String: String] {
         let headers = [
             "Content-Type": "application/json",
-            "X-API-Authentication" : "intervIEW_TOK3n"
+            "Authorization" : "Token 5994570dd4865ca5fd5a7b4ecefd5d17180d3d53"
         ]
         
         return headers

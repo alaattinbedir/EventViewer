@@ -31,14 +31,14 @@ class MySessionManager: NSObject {
     
     static let sharedInstance = MySessionManager()
     private var sessionManager: SessionManager
-    let baseURL = "http://api.mobile.staging.mfb.io/"
+    let baseURL = "https://www.boomset.com/"
     
     private override init() {
         // Create custom manager
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 280
         var headers = Alamofire.SessionManager.defaultHTTPHeaders
-        headers["X-API-Authentication"] = "intervIEW_TOK3n"
+        headers["Authorization"] = "Token 5994570dd4865ca5fd5a7b4ecefd5d17180d3d53"
         configuration.httpAdditionalHeaders = headers
         let manager = Alamofire.SessionManager(
             configuration: URLSessionConfiguration.default,
