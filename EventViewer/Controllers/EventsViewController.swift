@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class ViewController: UIViewController {
+class EventsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     
     
-    // Get messages from service
+    // Get events from service
     func getEventList(success:@escaping ([Results]) -> Void, failure:@escaping (String) -> Void) {
         
         MySessionManager.sharedInstance.requestGETURL("/apps/api/events", success: { (responseJSON) in
