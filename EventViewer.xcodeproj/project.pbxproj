@@ -22,6 +22,14 @@
 		840FD809211C788000584C6C /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD806211C787F00584C6C /* Results.swift */; };
 		840FD80A211C788000584C6C /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD807211C787F00584C6C /* Events.swift */; };
 		840FD80C211D6E0100584C6C /* AttendeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD80B211D6E0100584C6C /* AttendeesViewController.swift */; };
+		840FD81A2121B54700584C6C /* WorkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8122121B54700584C6C /* WorkInfo.swift */; };
+		840FD81B2121B54700584C6C /* Restype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8132121B54700584C6C /* Restype.swift */; };
+		840FD81C2121B54700584C6C /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8142121B54700584C6C /* Results.swift */; };
+		840FD81D2121B54700584C6C /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8152121B54700584C6C /* Answers.swift */; };
+		840FD81E2121B54700584C6C /* CheckinInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8162121B54700584C6C /* CheckinInfo.swift */; };
+		840FD81F2121B54700584C6C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8172121B54700584C6C /* Transaction.swift */; };
+		840FD8202121B54700584C6C /* Atendees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8182121B54700584C6C /* Atendees.swift */; };
+		840FD8212121B54700584C6C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8192121B54700584C6C /* Contact.swift */; };
 		94307CB8702701264DC06AC4 /* Pods_EventViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B0AE3A8AED6C85FDA5CEBE /* Pods_EventViewerTests.framework */; };
 		CF7FC09FF2F45C840A1FD509 /* Pods_EventViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A479F46004A9D339AD3A0053 /* Pods_EventViewerUITests.framework */; };
 		D6FC0E304EBDE41194F14061 /* Pods_EventViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC494826D895B3825A2D16D0 /* Pods_EventViewer.framework */; };
@@ -69,6 +77,14 @@
 		840FD806211C787F00584C6C /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Results.swift; path = ../../../../../Desktop/Events/Results.swift; sourceTree = "<group>"; };
 		840FD807211C787F00584C6C /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Events.swift; path = ../../../../../Desktop/Events/Events.swift; sourceTree = "<group>"; };
 		840FD80B211D6E0100584C6C /* AttendeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeesViewController.swift; sourceTree = "<group>"; };
+		840FD8122121B54700584C6C /* WorkInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkInfo.swift; sourceTree = "<group>"; };
+		840FD8132121B54700584C6C /* Restype.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restype.swift; sourceTree = "<group>"; };
+		840FD8142121B54700584C6C /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		840FD8152121B54700584C6C /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
+		840FD8162121B54700584C6C /* CheckinInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinInfo.swift; sourceTree = "<group>"; };
+		840FD8172121B54700584C6C /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		840FD8182121B54700584C6C /* Atendees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atendees.swift; sourceTree = "<group>"; };
+		840FD8192121B54700584C6C /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		921D66921C8D05CF418379CA /* Pods-EventViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EventViewerUITests/Pods-EventViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A0B0AE3A8AED6C85FDA5CEBE /* Pods_EventViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A479F46004A9D339AD3A0053 /* Pods_EventViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +200,7 @@
 		840FD7F3211C68F000584C6C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				840FD8112121B54700584C6C /* Atendees */,
 				840FD7FE211C748400584C6C /* Events */,
 			);
 			path = Models;
@@ -230,6 +247,21 @@
 				840FD806211C787F00584C6C /* Results.swift */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		840FD8112121B54700584C6C /* Atendees */ = {
+			isa = PBXGroup;
+			children = (
+				840FD8122121B54700584C6C /* WorkInfo.swift */,
+				840FD8132121B54700584C6C /* Restype.swift */,
+				840FD8142121B54700584C6C /* Results.swift */,
+				840FD8152121B54700584C6C /* Answers.swift */,
+				840FD8162121B54700584C6C /* CheckinInfo.swift */,
+				840FD8172121B54700584C6C /* Transaction.swift */,
+				840FD8182121B54700584C6C /* Atendees.swift */,
+				840FD8192121B54700584C6C /* Contact.swift */,
+			);
+			path = Atendees;
 			sourceTree = "<group>";
 		};
 		886B7670475BE80BC9229817 /* Pods */ = {
@@ -463,15 +495,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840FD8212121B54700584C6C /* Contact.swift in Sources */,
 				840FD80A211C788000584C6C /* Events.swift in Sources */,
 				840FD7FD211C69F800584C6C /* Utilities.swift in Sources */,
+				840FD81F2121B54700584C6C /* Transaction.swift in Sources */,
 				840FD7FB211C69E900584C6C /* Session.swift in Sources */,
 				840FD808211C788000584C6C /* Group.swift in Sources */,
+				840FD81B2121B54700584C6C /* Restype.swift in Sources */,
 				840FD80C211D6E0100584C6C /* AttendeesViewController.swift in Sources */,
 				840FD7C4211C2C7400584C6C /* EventsViewController.swift in Sources */,
+				840FD81D2121B54700584C6C /* Answers.swift in Sources */,
 				840FD809211C788000584C6C /* Results.swift in Sources */,
+				840FD8202121B54700584C6C /* Atendees.swift in Sources */,
 				840FD7CA211C2C7400584C6C /* EventViewer.xcdatamodeld in Sources */,
+				840FD81C2121B54700584C6C /* Results.swift in Sources */,
 				840FD7F9211C69B700584C6C /* MySessionManager.swift in Sources */,
+				840FD81A2121B54700584C6C /* WorkInfo.swift in Sources */,
+				840FD81E2121B54700584C6C /* CheckinInfo.swift in Sources */,
 				840FD7C2211C2C7400584C6C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
