@@ -9,6 +9,7 @@
 import UIKit
 import ObjectMapper
 
+
 class AttendeesViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -22,17 +23,17 @@ class AttendeesViewController: UIViewController {
     }
 
     // Get events from service
-    func getAttendeesList(success:@escaping ([Results]) -> Void, failure:@escaping (String) -> Void) {
+    func getAttendeesList(success:@escaping ([Atendees]) -> Void, failure:@escaping (String) -> Void) {
 //        https://www.boomset.com/apps/api/events/:event_id/attendees?:page
         
-        let url = "/apps/api/events/1/attendees?1"
+        let url = "/apps/api/events/71790/attendees?71790"
         
         MySessionManager.sharedInstance.requestGETURL(url, success: { (responseJSON) in
             // Get json object from response
             let array = responseJSON["results"].arrayObject
             
             // Map json array to Array<Message> object
-            guard let results:[Results] = Mapper<Results>().mapArray(JSONObject: array) else {
+            guard let results:[Atendees] = Mapper<Atendees>().mapArray(JSONObject: array) else {
                 failure("Error mapping response")
                 return
             }
