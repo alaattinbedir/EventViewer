@@ -1,27 +1,28 @@
 //
-//  Answers.swift
+//  Transaction.swift
 //
 //  Created by Alaattin Bedir on 13.08.2018
 //  Copyright (c) . All rights reserved.
 //
 
 import Foundation
+import ObjectMapper
 
-public class Answers: Mappable {
+public class Transaction: Mappable {
 
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {
-    static let answer = "answer"
-    static let optionId = "option_id"
-    static let questionId = "question_id"
-    static let question = "question"
+    static let total = "total"
+    static let restype = "restype"
+    static let amount = "amount"
+    static let fee = "fee"
   }
 
   // MARK: Properties
-  public var answer: String?
-  public var optionId: Int?
-  public var questionId: Int?
-  public var question: String?
+  public var total: String?
+  public var restype: Restype?
+  public var amount: String?
+  public var fee: String?
 
   // MARK: ObjectMapper Initializers
   /// Map a JSON object to this class using ObjectMapper.
@@ -35,10 +36,10 @@ public class Answers: Mappable {
   ///
   /// - parameter map: A mapping from ObjectMapper.
   public func mapping(map: Map) {
-    answer <- map[SerializationKeys.answer]
-    optionId <- map[SerializationKeys.optionId]
-    questionId <- map[SerializationKeys.questionId]
-    question <- map[SerializationKeys.question]
+    total <- map[SerializationKeys.total]
+    restype <- map[SerializationKeys.restype]
+    amount <- map[SerializationKeys.amount]
+    fee <- map[SerializationKeys.fee]
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -46,10 +47,10 @@ public class Answers: Mappable {
   /// - returns: A Key value pair containing all valid values in the object.
   public func dictionaryRepresentation() -> [String: Any] {
     var dictionary: [String: Any] = [:]
-    if let value = answer { dictionary[SerializationKeys.answer] = value }
-    if let value = optionId { dictionary[SerializationKeys.optionId] = value }
-    if let value = questionId { dictionary[SerializationKeys.questionId] = value }
-    if let value = question { dictionary[SerializationKeys.question] = value }
+    if let value = total { dictionary[SerializationKeys.total] = value }
+    if let value = restype { dictionary[SerializationKeys.restype] = value.dictionaryRepresentation() }
+    if let value = amount { dictionary[SerializationKeys.amount] = value }
+    if let value = fee { dictionary[SerializationKeys.fee] = value }
     return dictionary
   }
 

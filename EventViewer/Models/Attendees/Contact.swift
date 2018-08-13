@@ -1,23 +1,28 @@
 //
-//  Atendees.swift
+//  Contact.swift
 //
 //  Created by Alaattin Bedir on 13.08.2018
 //  Copyright (c) . All rights reserved.
 //
 
 import Foundation
+import ObjectMapper
 
-public class Atendees: Mappable {
+public class Contact: Mappable {
 
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {
-    static let results = "results"
-    static let count = "count"
+    static let lastName = "last_name"
+    static let email = "email"
+    static let firstName = "first_name"
+    static let prefix = "prefix"
   }
 
   // MARK: Properties
-  public var results: [Results]?
-  public var count: Int?
+  public var lastName: String?
+  public var email: String?
+  public var firstName: String?
+  public var prefix: String?
 
   // MARK: ObjectMapper Initializers
   /// Map a JSON object to this class using ObjectMapper.
@@ -31,8 +36,10 @@ public class Atendees: Mappable {
   ///
   /// - parameter map: A mapping from ObjectMapper.
   public func mapping(map: Map) {
-    results <- map[SerializationKeys.results]
-    count <- map[SerializationKeys.count]
+    lastName <- map[SerializationKeys.lastName]
+    email <- map[SerializationKeys.email]
+    firstName <- map[SerializationKeys.firstName]
+    prefix <- map[SerializationKeys.prefix]
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -40,8 +47,10 @@ public class Atendees: Mappable {
   /// - returns: A Key value pair containing all valid values in the object.
   public func dictionaryRepresentation() -> [String: Any] {
     var dictionary: [String: Any] = [:]
-    if let value = results { dictionary[SerializationKeys.results] = value.map { $0.dictionaryRepresentation() } }
-    if let value = count { dictionary[SerializationKeys.count] = value }
+    if let value = lastName { dictionary[SerializationKeys.lastName] = value }
+    if let value = email { dictionary[SerializationKeys.email] = value }
+    if let value = firstName { dictionary[SerializationKeys.firstName] = value }
+    if let value = prefix { dictionary[SerializationKeys.prefix] = value }
     return dictionary
   }
 

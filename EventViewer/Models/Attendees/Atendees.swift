@@ -1,13 +1,14 @@
 //
-//  Results.swift
+//  Atendees.swift
 //
 //  Created by Alaattin Bedir on 13.08.2018
 //  Copyright (c) . All rights reserved.
 //
 
 import Foundation
+import ObjectMapper
 
-public class Results: Mappable {
+public class Atendees: Mappable {
 
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {
