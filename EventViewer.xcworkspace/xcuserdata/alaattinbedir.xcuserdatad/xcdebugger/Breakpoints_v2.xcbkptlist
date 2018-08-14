@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EventViewer/Controllers/AttendeesViewController.swift"
-            timestampString = "555972096.747757"
+            timestampString = "555973966.0725091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EventViewer/Controllers/AttendeesViewController.swift"
-            timestampString = "555972096.7478499"
+            timestampString = "555973966.072621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EventViewer/Controllers/EventsViewController.swift"
-            timestampString = "555972096.747929"
+            timestampString = "555973966.072717"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EventViewer/Controllers/EventsViewController.swift"
-            timestampString = "555972096.7480201"
+            timestampString = "555973966.072825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -97,6 +97,54 @@
             endingLineNumber = "57"
             landmarkName = "addAttendeeData(object:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventViewer/Controllers/AttendeesViewController.swift"
+            timestampString = "555973966.072942"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "getAttendeesList(_:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static EventViewer.Atendees.getAttendeesList(Swift.Int, success: (Swift.Array&lt;EventViewer.Atendees&gt;) -&gt; (), failure: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "EventViewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alaattinbedir/Projects/EventViewer/EventViewer/Controllers/AttendeesViewController.swift"
+                  timestampString = "555973863.113708"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "528">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in static EventViewer.Atendees.getAttendeesList(Swift.Int, success: (Swift.Array&lt;EventViewer.Atendees&gt;) -&gt; (), failure: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "EventViewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alaattinbedir/Projects/EventViewer/EventViewer/Controllers/AttendeesViewController.swift"
+                  timestampString = "555973863.115371"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

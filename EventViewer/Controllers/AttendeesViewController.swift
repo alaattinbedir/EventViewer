@@ -76,7 +76,7 @@ class AttendeesViewController: UITableViewController {
 
 // Extension to Atendees model
 extension Atendees {
-    // Get events from service
+    // Get attendees from service
     static func getAttendeesList(_ eventId:(Int) ,success:@escaping ([Atendees]) -> Void, failure:@escaping (String) -> Void) {
         
         let url = "/apps/api/events/\(eventId)/attendees?\(eventId)"
@@ -85,7 +85,7 @@ extension Atendees {
             // Get json object from response
             let array = responseJSON["results"].arrayObject
             
-            // Map json array to Array<Message> object
+            // Map json array to Array<Atendees> object
             guard let results:[Atendees] = Mapper<Atendees>().mapArray(JSONObject: array) else {
                 failure("Error mapping response")
                 return

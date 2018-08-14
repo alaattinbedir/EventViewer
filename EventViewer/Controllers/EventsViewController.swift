@@ -87,7 +87,7 @@ extension Events {
             // Get json object from response
             let array = responseJSON["results"].arrayObject
             
-            // Map json array to Array<Message> object
+            // Map json array to Array<Events> object
             guard let results:[Events] = Mapper<Events>().mapArray(JSONObject: array) else {
                 failure("Error mapping response")
                 return
