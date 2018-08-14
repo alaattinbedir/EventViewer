@@ -28,9 +28,11 @@ class EventViewerUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLaunch() {
+        let app = XCUIApplication()
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["May 05, 2018"]/*[[".cells.staticTexts[\"May 05, 2018\"]",".staticTexts[\"May 05, 2018\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Attendees"].buttons["Events"].tap()
+        
     }
     
 }
