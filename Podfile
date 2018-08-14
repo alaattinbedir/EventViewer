@@ -14,6 +14,8 @@ target 'EventViewer' do
   pod 'ObjectMapper', '~> 3.1'
   pod 'SVProgressHUD'
   pod 'SnapKit', '~> 4.0'
+  pod 'RealmSwift'
+  pod 'PagedArray'
 
   target 'EventViewerTests' do
     inherit! :search_paths

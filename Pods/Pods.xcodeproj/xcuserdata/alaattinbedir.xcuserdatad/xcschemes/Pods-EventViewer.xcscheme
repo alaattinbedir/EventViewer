@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A03979C80C3666AB19F46A32971D3934"
+               BlueprintIdentifier = "D9CC5368E48CA3160A245B696B09BA25"
                BuildableName = "Pods_EventViewer.framework"
                BlueprintName = "Pods-EventViewer"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A03979C80C3666AB19F46A32971D3934"
+            BlueprintIdentifier = "D9CC5368E48CA3160A245B696B09BA25"
             BuildableName = "Pods_EventViewer.framework"
             BlueprintName = "Pods-EventViewer"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		840FD7C2211C2C7400584C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD7C1211C2C7400584C6C /* AppDelegate.swift */; };
 		840FD7C4211C2C7400584C6C /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD7C3211C2C7400584C6C /* EventsViewController.swift */; };
-		840FD7C7211C2C7400584C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840FD7C5211C2C7400584C6C /* Main.storyboard */; };
 		840FD7CA211C2C7400584C6C /* EventViewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 840FD7C8211C2C7400584C6C /* EventViewer.xcdatamodeld */; };
 		840FD7CC211C2C7600584C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840FD7CB211C2C7600584C6C /* Assets.xcassets */; };
 		840FD7CF211C2C7600584C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840FD7CD211C2C7600584C6C /* LaunchScreen.storyboard */; };
@@ -29,6 +28,8 @@
 		840FD82E2121B66100584C6C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8272121B66100584C6C /* Transaction.swift */; };
 		840FD82F2121B66100584C6C /* Atendees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8282121B66100584C6C /* Atendees.swift */; };
 		840FD8302121B66100584C6C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8292121B66100584C6C /* Contact.swift */; };
+		840FD83C2122F33B00584C6C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD83B2122F33B00584C6C /* Event.swift */; };
+		840FD83E2122F3FC00584C6C /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD83D2122F3FC00584C6C /* DBManager.swift */; };
 		94307CB8702701264DC06AC4 /* Pods_EventViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B0AE3A8AED6C85FDA5CEBE /* Pods_EventViewerTests.framework */; };
 		CF7FC09FF2F45C840A1FD509 /* Pods_EventViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A479F46004A9D339AD3A0053 /* Pods_EventViewerUITests.framework */; };
 		D6FC0E304EBDE41194F14061 /* Pods_EventViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC494826D895B3825A2D16D0 /* Pods_EventViewer.framework */; };
@@ -58,7 +59,6 @@
 		840FD7BE211C2C7400584C6C /* EventViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840FD7C1211C2C7400584C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840FD7C3211C2C7400584C6C /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		840FD7C6211C2C7400584C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		840FD7C9211C2C7400584C6C /* EventViewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventViewer.xcdatamodel; sourceTree = "<group>"; };
 		840FD7CB211C2C7600584C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840FD7CE211C2C7600584C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,6 +83,8 @@
 		840FD8272121B66100584C6C /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		840FD8282121B66100584C6C /* Atendees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atendees.swift; sourceTree = "<group>"; };
 		840FD8292121B66100584C6C /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		840FD83B2122F33B00584C6C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		840FD83D2122F3FC00584C6C /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		921D66921C8D05CF418379CA /* Pods-EventViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EventViewerUITests/Pods-EventViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A0B0AE3A8AED6C85FDA5CEBE /* Pods_EventViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A479F46004A9D339AD3A0053 /* Pods_EventViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,7 +190,6 @@
 		840FD7F2211C2D3000584C6C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				840FD7C5211C2C7400584C6C /* Main.storyboard */,
 				840FD7CB211C2C7600584C6C /* Assets.xcassets */,
 				840FD7CD211C2C7600584C6C /* LaunchScreen.storyboard */,
 			);
@@ -198,6 +199,7 @@
 		840FD7F3211C68F000584C6C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				840FD8382122F2E000584C6C /* RealmDB */,
 				840FD8222121B66100584C6C /* Attendees */,
 				840FD7FE211C748400584C6C /* Events */,
 			);
@@ -207,6 +209,7 @@
 		840FD7F4211C68FA00584C6C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				840FD8332122C49B00584C6C /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +262,22 @@
 				840FD8292121B66100584C6C /* Contact.swift */,
 			);
 			path = Attendees;
+			sourceTree = "<group>";
+		};
+		840FD8332122C49B00584C6C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		840FD8382122F2E000584C6C /* RealmDB */ = {
+			isa = PBXGroup;
+			children = (
+				840FD83B2122F33B00584C6C /* Event.swift */,
+				840FD83D2122F3FC00584C6C /* DBManager.swift */,
+			);
+			path = RealmDB;
 			sourceTree = "<group>";
 		};
 		886B7670475BE80BC9229817 /* Pods */ = {
@@ -384,7 +403,6 @@
 			files = (
 				840FD7CF211C2C7600584C6C /* LaunchScreen.storyboard in Resources */,
 				840FD7CC211C2C7600584C6C /* Assets.xcassets in Resources */,
-				840FD7C7211C2C7400584C6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +486,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-EventViewer/Pods-EventViewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PagedArray/PagedArray.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -476,6 +497,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PagedArray.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -502,12 +526,14 @@
 				840FD808211C788000584C6C /* Group.swift in Sources */,
 				840FD82B2121B66100584C6C /* Restype.swift in Sources */,
 				840FD80C211D6E0100584C6C /* AttendeesViewController.swift in Sources */,
+				840FD83C2122F33B00584C6C /* Event.swift in Sources */,
 				840FD7C4211C2C7400584C6C /* EventsViewController.swift in Sources */,
 				840FD809211C788000584C6C /* Results.swift in Sources */,
 				840FD7CA211C2C7400584C6C /* EventViewer.xcdatamodeld in Sources */,
 				840FD7F9211C69B700584C6C /* MySessionManager.swift in Sources */,
 				840FD82A2121B66100584C6C /* WorkInfo.swift in Sources */,
 				840FD7C2211C2C7400584C6C /* AppDelegate.swift in Sources */,
+				840FD83E2122F3FC00584C6C /* DBManager.swift in Sources */,
 				840FD82E2121B66100584C6C /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,14 +570,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		840FD7C5211C2C7400584C6C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				840FD7C6211C2C7400584C6C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		840FD7CD211C2C7600584C6C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

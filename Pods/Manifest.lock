@@ -1,6 +1,12 @@
 PODS:
   - Alamofire (4.7.3)
   - ObjectMapper (3.3.0)
+  - PagedArray (0.8)
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
   - SnapKit (4.0.0)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.1.0)
@@ -8,6 +14,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - ObjectMapper (~> 3.1)
+  - PagedArray
+  - RealmSwift
   - SnapKit (~> 4.0)
   - SVProgressHUD
   - SwiftyJSON
@@ -16,6 +24,9 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - ObjectMapper
+    - PagedArray
+    - Realm
+    - RealmSwift
     - SnapKit
     - SVProgressHUD
     - SwiftyJSON
@@ -23,10 +34,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  PagedArray: cc4b6d687f44dd3fb8a64bd3d6a4397c0163d43d
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 2e6cd4e2c09bba7ce62cb2b7bb4c26e32fa7ddf2
+PODFILE CHECKSUM: dfe442d8ff9d6ac122f8753f3d957bb8823bad81
 
 COCOAPODS: 1.5.3
