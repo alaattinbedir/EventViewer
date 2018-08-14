@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EventViewer/Controllers/AttendeesViewController.swift"
-            timestampString = "555968233.3828731"
+            timestampString = "555972096.747757"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EventViewer/Controllers/AttendeesViewController.swift"
-            timestampString = "555968233.3832459"
+            timestampString = "555972096.7478499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -58,11 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EventViewer/Controllers/EventsViewController.swift"
-            timestampString = "555968233.383516"
+            timestampString = "555972096.747929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138">
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "getEventList(success:failure:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -72,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EventViewer/Controllers/EventsViewController.swift"
-            timestampString = "555968233.383708"
+            timestampString = "555972096.7480201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"

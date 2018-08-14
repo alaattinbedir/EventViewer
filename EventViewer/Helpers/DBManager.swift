@@ -24,9 +24,27 @@ public class DBManager {
     func addEventData(object: Events) {
         try! database.write {
             let item = Event()
-            item.name = object.name!
-            item.date = object.endsat!
-            item.id = object.id!
+            
+            if let name = object.name {
+                item.name = name
+            }
+            
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+            
+            let dateFormatterPrint = DateFormatter()
+            dateFormatterPrint.dateFormat = "MMM dd, yyyy"
+
+            if let date = dateFormatterGet.date(from: object.endsat!){
+                item.date = dateFormatterPrint.string(from: date)
+            }
+            else {
+                print("There was an error decoding the string")
+            }
+            
+            if let id = object.id {
+                item.id = id
+            }
             
             database.add(item, update: false)
             print("Added new event")

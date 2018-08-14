@@ -48,7 +48,6 @@ class EventsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.eventsArray.count
         return DBManager.sharedInstance.getDataFromEvent().count
     }
     
