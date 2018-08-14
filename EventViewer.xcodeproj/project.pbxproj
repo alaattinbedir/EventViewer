@@ -30,6 +30,8 @@
 		840FD8412123051C00584C6C /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD83F2123051C00584C6C /* Events.swift */; };
 		840FD8422123051C00584C6C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8402123051C00584C6C /* Group.swift */; };
 		840FD8442123589100584C6C /* Attendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8432123589100584C6C /* Attendee.swift */; };
+		840FD8462123682B00584C6C /* AttendeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8452123682B00584C6C /* AttendeeCell.swift */; };
+		840FD8482123685A00584C6C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FD8472123685A00584C6C /* EventCell.swift */; };
 		94307CB8702701264DC06AC4 /* Pods_EventViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B0AE3A8AED6C85FDA5CEBE /* Pods_EventViewerTests.framework */; };
 		CF7FC09FF2F45C840A1FD509 /* Pods_EventViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A479F46004A9D339AD3A0053 /* Pods_EventViewerUITests.framework */; };
 		D6FC0E304EBDE41194F14061 /* Pods_EventViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC494826D895B3825A2D16D0 /* Pods_EventViewer.framework */; };
@@ -85,6 +87,8 @@
 		840FD83F2123051C00584C6C /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		840FD8402123051C00584C6C /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		840FD8432123589100584C6C /* Attendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee.swift; sourceTree = "<group>"; };
+		840FD8452123682B00584C6C /* AttendeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeCell.swift; sourceTree = "<group>"; };
+		840FD8472123685A00584C6C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		921D66921C8D05CF418379CA /* Pods-EventViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EventViewerUITests/Pods-EventViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A0B0AE3A8AED6C85FDA5CEBE /* Pods_EventViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A479F46004A9D339AD3A0053 /* Pods_EventViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +270,8 @@
 		840FD8332122C49B00584C6C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				840FD8452123682B00584C6C /* AttendeeCell.swift */,
+				840FD8472123685A00584C6C /* EventCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -527,7 +533,9 @@
 				840FD83C2122F33B00584C6C /* Event.swift in Sources */,
 				840FD8422123051C00584C6C /* Group.swift in Sources */,
 				840FD7C4211C2C7400584C6C /* EventsViewController.swift in Sources */,
+				840FD8462123682B00584C6C /* AttendeeCell.swift in Sources */,
 				840FD7CA211C2C7400584C6C /* EventViewer.xcdatamodeld in Sources */,
+				840FD8482123685A00584C6C /* EventCell.swift in Sources */,
 				840FD7F9211C69B700584C6C /* MySessionManager.swift in Sources */,
 				840FD82A2121B66100584C6C /* WorkInfo.swift in Sources */,
 				840FD7C2211C2C7400584C6C /* AppDelegate.swift in Sources */,

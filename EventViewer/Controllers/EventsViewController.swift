@@ -62,7 +62,6 @@ class EventsViewController: UITableViewController {
         let index = Int(indexPath.row)
         let event = DBManager.sharedInstance.getDataFromEvent()[index] as Event
         
-//        let event = self.eventsArray[indexPath.row] as Events
         cell.eventNameLabel.text = event.name
         cell.eventDateLabel.text = event.date
         
@@ -76,56 +75,6 @@ class EventsViewController: UITableViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     
-}
-
-
-class EventCell: UITableViewCell {
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupViews()
-        setupConstraints()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    let eventNameLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    
-    let eventDateLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    
-    
-    override func updateConstraints() {
-        super.updateConstraints()
-        setupConstraints()
-    }
-    
-    func setupViews() {
-        addSubview(eventNameLabel)
-        addSubview(eventDateLabel)
-    }
-    
-    func setupConstraints() {
-        eventNameLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self).offset(10)
-            make.left.equalTo(self).offset(10)
-            make.right.equalTo(self).offset(-10)
-            make.height.equalTo(20)
-        }
-        
-        eventDateLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(eventNameLabel.snp.bottom).offset(10)
-            make.left.equalTo(self).offset(10)
-            make.right.equalTo(self).offset(-10)
-            make.height.equalTo(20)
-        }
-    }
 }
 
 extension Events {
