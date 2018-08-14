@@ -19,8 +19,6 @@ class EventsViewController: UITableViewController {
         
         navigationItem.title = "Events"
         
-        DBManager.sharedInstance.deleteAllFromDatabase()
-        
         setTableView()
         getEventList()
     }
@@ -35,6 +33,7 @@ class EventsViewController: UITableViewController {
         Events.getEventList(success: { (events) in
             self.eventsArray = events
             DBManager.sharedInstance.addBatchEventData(objects: self.eventsArray)
+            
             // reload data to tableview on main thread
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -70,6 +69,13 @@ class EventsViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = AttendeesViewController()
+        let index = Int(indexPath.row)
+        controller.selectedEvent = DBManager.sharedInstance.getDataFromEvent()[index] as Event
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }
 
 
@@ -86,13 +92,11 @@ class EventCell: UITableViewCell {
     
     let eventNameLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let eventDateLabel: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     

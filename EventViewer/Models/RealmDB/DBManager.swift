@@ -26,6 +26,7 @@ public class DBManager {
             let item = Event()
             item.name = object.name!
             item.date = object.endsat!
+            item.id = object.id!
             
             database.add(item, update: false)
             print("Added new event")
@@ -38,15 +39,63 @@ public class DBManager {
         }
     }
     
+    func deleteFromEvent(object: Event)   {
+        try! database.write {
+            database.delete(object)
+        }
+    }
+    
+    func getDataFromAttendees() -> Results<Attendee> {
+        let results: Results<Attendee> =   database.objects(Attendee.self)
+        return results
+    }
+    
+    func addAttendeeData(object: Atendees) {
+        try! database.write {
+            let item = Attendee()
+            
+            if let prefix = object.contact?.prefix {
+                item.prefix = prefix
+            }
+            
+            if let firstName = object.contact?.firstName {
+                item.firstName = firstName
+            }
+            
+            if let lastName = object.contact?.lastName {
+                item.lastName = lastName
+            }
+            
+            if let title = object.workInfo?.title {
+                item.title = title
+            }
+            
+            if let company = object.workInfo?.company {
+                item.company = company
+            }
+            
+            database.add(item, update: false)
+            print("Added new attendee")
+        }
+    }
+    
+    func addBatchAttendeesData(objects:[Atendees])  {
+        for attendee in objects {
+            addAttendeeData(object: attendee)
+        }
+    }
+    
+    func deleteFromAttendee(object: Attendee)   {
+        try! database.write {
+            database.delete(object)
+        }
+    }
+    
     func deleteAllFromDatabase()  {
         try! database.write {
             database.deleteAll()
         }
     }
     
-    func deleteFromDb(object: Event)   {
-        try! database.write {
-            database.delete(object)
-        }
-    }
+    
 }

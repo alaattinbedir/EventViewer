@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class Event: Object {
+    @objc dynamic var id = -1
     @objc dynamic var name = ""
     @objc dynamic var date = ""    
 }
