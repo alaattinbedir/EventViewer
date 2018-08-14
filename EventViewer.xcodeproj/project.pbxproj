@@ -230,6 +230,7 @@
 		840FD7F6211C690C00584C6C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				840FD83D2122F3FC00584C6C /* DBManager.swift */,
 				840FD7FA211C69E900584C6C /* Session.swift */,
 				840FD7FC211C69F800584C6C /* Utilities.swift */,
 			);
@@ -280,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				840FD83B2122F33B00584C6C /* Event.swift */,
-				840FD83D2122F3FC00584C6C /* DBManager.swift */,
 				840FD8432123589100584C6C /* Attendee.swift */,
 			);
 			path = RealmDB;

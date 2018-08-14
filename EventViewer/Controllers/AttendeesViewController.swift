@@ -74,6 +74,7 @@ class AttendeesViewController: UITableViewController {
 
 }
 
+// Extension to Atendees model
 extension Atendees {
     // Get events from service
     static func getAttendeesList(_ eventId:(Int) ,success:@escaping ([Atendees]) -> Void, failure:@escaping (String) -> Void) {

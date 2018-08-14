@@ -77,6 +77,8 @@ class EventsViewController: UITableViewController {
     
 }
 
+
+// Extension to Events model
 extension Events {
     
     // Get events from service
