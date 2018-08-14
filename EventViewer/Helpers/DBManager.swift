@@ -46,8 +46,7 @@ public class DBManager {
                 item.id = id
             }
             
-            database.add(item, update: false)
-            print("Added new event")
+            database.add(item, update: false)            
         }
     }
     
@@ -93,7 +92,6 @@ public class DBManager {
             }
             
             database.add(item, update: false)
-            print("Added new attendee")
         }
     }
     
