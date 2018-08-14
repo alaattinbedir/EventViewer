@@ -9,22 +9,32 @@
 import UIKit
 import RealmSwift
 
-class DBManager {
-    private var database:Realm
+public class DBManager {
+    private var database: Realm
     static let sharedInstance = DBManager()
     private init() {
         database = try! Realm()
     }
     
-    func getDataFromEvent() ->  RealmSwift.Results<Event> {
-        let results: RealmSwift.Results<Event> =   database.objects(Event.self)
+    func getDataFromEvent() -> Results<Event> {
+        let results: Results<Event> =   database.objects(Event.self)
         return results
     }
     
-    func addEventData(object: Event)   {
+    func addEventData(object: Events) {
         try! database.write {
-            database.add(object, update: true)
-            print("Added new object")
+            let item = Event()
+            item.name = object.name!
+            item.date = object.endsat!
+            
+            database.add(item, update: false)
+            print("Added new event")
+        }
+    }
+    
+    func addBatchEventData(objects:[Events])  {
+        for event in objects {
+            addEventData(object: event)
         }
     }
     

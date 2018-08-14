@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EventsViewController.swift
 //  EventViewer
 //
 //  Created by Alaattin Bedir on 9.08.2018.
@@ -12,26 +12,29 @@ import SnapKit
 
 class EventsViewController: UITableViewController {
 
-    var eventsArray:[Results] = []
+    var eventsArray:[Events] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "Events"
         
+        DBManager.sharedInstance.deleteAllFromDatabase()
+        
         setTableView()
         getEventList()
     }
     
-    fileprivate func setTableView() {
+    func setTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 60
+        tableView.estimatedRowHeight = 44
         tableView.register(EventCell.self, forCellReuseIdentifier: "cellId")
     }
     
-    fileprivate func getEventList() {
+    func getEventList() {
         Events.getEventList(success: { (events) in
             self.eventsArray = events
+            DBManager.sharedInstance.addBatchEventData(objects: self.eventsArray)
             // reload data to tableview on main thread
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -46,7 +49,8 @@ class EventsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.eventsArray.count
+//        return self.eventsArray.count
+        return DBManager.sharedInstance.getDataFromEvent().count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -55,8 +59,13 @@ class EventsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath as IndexPath) as! EventCell
-        cell.eventNameLabel.text = "Event"
-        cell.eventDateLabel.text = "16.03.2018"
+        
+        let index = Int(indexPath.row)
+        let event = DBManager.sharedInstance.getDataFromEvent()[index] as Event
+        
+//        let event = self.eventsArray[indexPath.row] as Events
+        cell.eventNameLabel.text = event.name
+        cell.eventDateLabel.text = event.date
         
         return cell
     }
@@ -68,6 +77,7 @@ class EventCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
+        setupConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -87,10 +97,17 @@ class EventCell: UITableViewCell {
     }()
     
     
+    override func updateConstraints() {
+        super.updateConstraints()
+        setupConstraints()
+    }
+    
     func setupViews() {
         addSubview(eventNameLabel)
         addSubview(eventDateLabel)
-        
+    }
+    
+    func setupConstraints() {
         eventNameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self).offset(10)
             make.left.equalTo(self).offset(10)
@@ -102,23 +119,22 @@ class EventCell: UITableViewCell {
             make.top.equalTo(eventNameLabel.snp.bottom).offset(10)
             make.left.equalTo(self).offset(10)
             make.right.equalTo(self).offset(-10)
-            make.height.equalTo(20)            
+            make.height.equalTo(20)
         }
-        
     }
 }
 
 extension Events {
     
     // Get events from service
-    static func getEventList(success:@escaping ([Results]) -> Void, failure:@escaping (String) -> Void) {
+    static func getEventList(success:@escaping ([Events]) -> Void, failure:@escaping (String) -> Void) {
         
         MySessionManager.sharedInstance.requestGETURL("/apps/api/events", success: { (responseJSON) in
             // Get json object from response
             let array = responseJSON["results"].arrayObject
             
             // Map json array to Array<Message> object
-            guard let results:[Results] = Mapper<Results>().mapArray(JSONObject: array) else {
+            guard let results:[Events] = Mapper<Events>().mapArray(JSONObject: array) else {
                 failure("Error mapping response")
                 return
             }
